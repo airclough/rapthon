@@ -15,7 +15,7 @@ def popReceivedMessage():
 def handle_polling( timeout, fx, delay_interval = 0 ):
     try:
         if timeout != -1:
-            print('waiting for ' + str(timeout) + ' seconds...')
+            print( 'Timeout: ' + str(timeout) )
             end = time.time() + timeout
             while time.time() < end:
                 fx()
@@ -26,8 +26,6 @@ def handle_polling( timeout, fx, delay_interval = 0 ):
                 time.sleep( delay_interval )
     except KeyboardInterrupt as e:
         sys.exit( e )
-
-
 
 if __name__ == '__main__':
     print( 'Rapthon running' )
