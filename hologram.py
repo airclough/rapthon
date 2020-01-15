@@ -15,7 +15,7 @@ def popReceivedMessage():
 def handle_polling( timeout, fx, delay_interval = 0 ):
     try:
         if timeout != -1:
-            print( 'Timeout: ' + str(timeout) )
+            print( 'Timeout: ' + str( timeout ) )
             end = time.time() + timeout
             while time.time() < end:
                 fx()
